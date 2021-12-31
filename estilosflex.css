@@ -1,0 +1,48 @@
+body{ /* con esto le defino el fondo de mi cuerpo de la pagina web */
+    background: #E9E9E9;
+}
+
+.contenedor { /* este es para definir su padre el contenedor principal del flex*/
+    width: 500px; /* defino mi ancho*/
+    height: 200px; /* defino mi algto del contenedor */
+    background: #fff; /* defino su color de fondo */
+    padding: 10px; /* defino su separacion interna */
+    border: 10px solid #2C3E50; /* defino que tenga un borde de estilo solido y de color gris oscuro */
+    margin: 20px; /* defino un margen con los elememtos de afuera */
+    /* apartir de aca se define nuestro uso del flex */
+    display: -webkit-flex; /* esto es para usar los prefijos de flexbox */
+    display: -ms-flexbox;  /* esto es para usar los prefijos de flexbox */
+    display: flex; /* con esto defino que usaremos el flexbox, muy importante se define desde el padre el flex*/
+    flex-direction: row; /*  con esto definimos su direccion del flex en columna o fila */
+    flex-wrap: nowrap; /* esta propiedad reordena los elementos si uno de ellos no cabe o se sale de margen y lo ubica automaticamente*/
+    justify-content: center; /* definimos la posicion en horizontal y su espacio del contenedor */ 
+    align-items: center ; /* definimos su poscion en vertical */ 
+    /*align-content: center;*/ /* es parecido a align items pero es para centrar grupo de elementos que esten dentro de una fila, con align content actuara sobre los elementos en total */
+
+
+
+
+}
+
+.elemento{ /* estas propiedades actuaran sobre cada uno de los hijos del flex */
+    /*flex-shrink: 1;*/ /* reduce los elementos en comparacion de sus hermanos */
+    /*flex-grow: 1;*/ /* es un valor que le indicamos el crecimiento que tendra el elemento en comparacion con los hermanos */
+    /* le indicamos el crecimiento que le indicamos */
+    color: #fff;  /* color de letra*/
+    margin: 5px;   /*margen */ 
+    width: 50px ;   /* ancho de cada elemento*/
+    /*flex-basis: 50px;*/ /* este funciona en lugar del width, es dinamica por el hecho que dependiendo de como tengamos la direccion de nuestro flex este actuara sobre el ancho o sobre el alto// reemplacaria tanto el width y el heigth y ayudaria mucho con los @ media queries */
+    height: 50px; /* alto de cada elemento */
+    background: #E67E22;  /* fondo de color anaranjado */
+    text-align: center;  /* alinear texto en el medio */
+}
+
+.elemento2 {
+    /*flex-grow: 2; */ /* en este ejemplo le indicamos un doble de crecimiento en comparacion de sus hermanos */
+    /* flex-shrink: 2;*/ /* este es al revez que grow este lo hace mas pequeño que su hermanos */
+    /*flex: 1 1 50px ;*//* este recibe  tres valores en el cual actua grow el shrink y el basis*/
+    /* order: 3;*/ /* le cambiamos el numero de orden de los elementos */
+    /*align-self: flex-start;*/ /* cambia la ubicacion de un solo elemento del que elegimos */
+    color: green;
+
+}
